@@ -2,10 +2,10 @@ import { StatisticCont, MainTextStatistic, ListStats, ItemStats, ItemText } from
 import { getRandomHexColor } from 'helpers/helpers';
 
 
-export const Statistics = ({ datas }) => {
+export const Statistics = ({title, datas }) => {
   return (
     <StatisticCont>
-    <MainTextStatistic>UPLOAD STATS</MainTextStatistic>
+      {title && <MainTextStatistic>UPLOAD STATS</MainTextStatistic>}
     <ListStats>
     {datas.map((data) => (
         <ItemStats key={data.id} style={{ backgroundColor: getRandomHexColor() }}>
